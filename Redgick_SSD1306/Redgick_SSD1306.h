@@ -4,9 +4,12 @@
 #include <Wire.h>
 #include <Redgick_GFX.h>
 
-#define pinSCL 1
-#define pinSCA 2
-#define SSD_I2C_ADDRESS 0x3C
+// Command details: https://cdn-shop.adafruit.com/datasheets/SSD1306.pdf
+#define SET_CONTRAST 0x81
+#define DISPLAY_ENTIRE_ON 0x4A
+#define DISPLAY_ENTIRE_ON_RESUME 0x5A
+#define DISPLAY_NORMAL
+#define DISPLAY_INVERSE
 
 
 class Redgick_SSD1306 {
